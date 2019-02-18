@@ -1,5 +1,5 @@
 package TNT_Bean;
-
+//지선이바보
 public class AttendBean {
 	int attendance_num;
 	int student_num;

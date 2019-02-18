@@ -1,5 +1,6 @@
 package TNT_Bean;
 
+//지선이바보
 import java.sql.Date;
 
 public class StudentBean {

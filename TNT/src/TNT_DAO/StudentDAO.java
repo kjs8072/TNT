@@ -1,5 +1,6 @@
 package TNT_DAO;
 
+//지선이바보
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
