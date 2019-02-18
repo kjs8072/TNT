@@ -1,13 +1,13 @@
-<%@page import="TNT.TestvuVO"%>
-<%@page import="TNT.StudentVO"%>
+<%@page import="TNT_DAO.TestvuVO"%>
+<%@page import="TNT_DAO.StudentVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@page import="java.util.ArrayList"%>
 
-<jsp:useBean id="bean" class="TNT.TntBean" />
-<jsp:useBean id="student" class="TNT.StudentVO" />
-<jsp:useBean id="grade" class="TNT.GradeVO" />
-<jsp:useBean id="vu" class="TNT.TestvuVO" />
+<jsp:useBean id="bean" class="TNT_Bean.TntBean" />
+<jsp:useBean id="student" class="TNT_DAO.StudentVO" />
+<jsp:useBean id="grade" class="TNT_DAO.GradeVO" />
+<jsp:useBean id="vu" class="TNT_DAO.TestvuVO" />
 
 <jsp:setProperty property="*" name="bean" />
 <jsp:setProperty property="*" name="student"/>
