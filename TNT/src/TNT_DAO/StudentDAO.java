@@ -85,7 +85,6 @@ public class StudentDAO {
 		return list;
 	}
 
-<<<<<<< HEAD
 	public ArrayList<StudentBean> getInfoList(){
 		connect();
 		String sql="select student_id, student_name, student_birth, student_gender, student_phone, student_address, student_univ_coll, student_major " 
@@ -117,11 +116,7 @@ public class StudentDAO {
 		return list;
 	}
 	
-	public ArrayList<TestvuVO> getScore() {
-=======
 	public ArrayList<TestvuBean> getScore() {
->>>>>>> branch 'master' of https://github.com/kjs8072/TNT.git
-
 		connect();
 		
 		String sql = "select * from test_vu";
