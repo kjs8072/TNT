@@ -1,4 +1,4 @@
-package TNT_DAO;
+package TNT_Bean;
 
 public class AttendBean {
 	int attendance_num;

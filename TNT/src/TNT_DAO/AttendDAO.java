@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import TNT_Bean.AttendBean;
+
 public class AttendDAO {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
