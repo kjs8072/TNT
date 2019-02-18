@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import TNT_Bean.StudentBean;
+import TNT_Bean.TestvuBean;
  
 public class StudentDAO {
 
@@ -84,6 +85,7 @@ public class StudentDAO {
 		return list;
 	}
 
+<<<<<<< HEAD
 	public ArrayList<StudentBean> getInfoList(){
 		connect();
 		String sql="select student_id, student_name, student_birth, student_gender, student_phone, student_address, student_univ_coll, student_major " 
@@ -116,18 +118,21 @@ public class StudentDAO {
 	}
 	
 	public ArrayList<TestvuVO> getScore() {
+=======
+	public ArrayList<TestvuBean> getScore() {
+>>>>>>> branch 'master' of https://github.com/kjs8072/TNT.git
 
 		connect();
 		
 		String sql = "select * from test_vu";
 		
-		ArrayList<TestvuVO> list = new ArrayList<>();
-		TestvuVO vu= null;
+		ArrayList<TestvuBean> list = new ArrayList<>();
+		TestvuBean vu= null;
 		try {
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				vu = new TestvuVO();
+				vu = new TestvuBean();
 				vu.setStudent_name(rs.getString("student_name"));
 				vu.setCourse_name(rs.getString("course_name"));
 				vu.setSubject_name(rs.getString("subject_name"));

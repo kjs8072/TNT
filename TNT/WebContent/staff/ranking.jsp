@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="TNT_DAO.*, java.util.ArrayList, java.sql.Date"%>
+<%@ page import="TNT_Bean.*, TNT_DAO.*, java.util.ArrayList, java.sql.Date"%>
+
 <jsp:useBean id="list" class="java.util.ArrayList" scope="request"></jsp:useBean>
 <jsp:setProperty property="*" name="list"></jsp:setProperty>
 <!DOCTYPE html>
@@ -15,11 +16,11 @@
 	<h2>학생 정보</h2>
 	<%
 		//언어 설정
-			request.setCharacterEncoding("UTF-8");
-		TestvuVO testvu = new TestvuVO();
-			StudentDAO tnt = new StudentDAO();
+		request.setCharacterEncoding("UTF-8");
+		TestvuBean testvu = new TestvuBean();
+		StudentDAO tnt = new StudentDAO();
 
-			tnt.getStudents();
+		tnt.getStudents();
 	%>
 
 	<table border="1">
@@ -33,7 +34,7 @@
 			<th>시험결과</th>
 		</tr>
 		<%
-			for (TestvuVO tu : (ArrayList<TestvuVO>)list) {
+			for (TestvuBean tu : (ArrayList<TestvuBean>)list) {
 		%>
 		<tr>
 
