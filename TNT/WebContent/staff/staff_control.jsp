@@ -1,10 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
    pageEncoding="EUC-KR"%>
-<<<<<<< HEAD
 <%@ page import="java.util.ArrayList, TNT_Bean.*, TNT_DAO.*"%>
-=======
 <%@ page import="java.util.ArrayList, TNT_Bean.*"%>
->>>>>>> branch 'master' of https://github.com/kjs8072/TNT.git
 
 <jsp:useBean id="bean" class="TNT_Bean.AttendBean"></jsp:useBean>
 <jsp:useBean id="TNT" class="TNT_DAO.StudentDAO"></jsp:useBean>
