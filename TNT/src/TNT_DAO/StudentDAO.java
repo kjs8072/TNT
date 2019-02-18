@@ -85,7 +85,42 @@ public class StudentDAO {
 		return list;
 	}
 
+<<<<<<< HEAD
+	public ArrayList<StudentBean> getInfoList(){
+		connect();
+		String sql="select student_id, student_name, student_birth, student_gender, student_phone, student_address, student_univ_coll, student_major " 
+				+ " from students";
+		
+		ArrayList<StudentBean> list = new ArrayList<>();
+		StudentBean bean = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				bean = new StudentBean();
+				bean.setStudent_name(rs.getString("student_name"));
+				bean.setStudent_birth(rs.getDate("student_birth"));
+				bean.setStudent_gender(rs.getString("gender"));
+				bean.setStudent_phone(rs.getString("student_phone"));
+				bean.setStudent_address(rs.getString("student_address"));
+				bean.setStudent_univ_coll(rs.getString("student_univ_coll"));
+				bean.setStudent_major(rs.getString("student_major"));
+				bean.setStudent_id(rs.getString("student_id"));
+				
+				list.add(bean);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	
+	public ArrayList<TestvuVO> getScore() {
+=======
 	public ArrayList<TestvuBean> getScore() {
+>>>>>>> branch 'master' of https://github.com/kjs8072/TNT.git
 
 		connect();
 		
