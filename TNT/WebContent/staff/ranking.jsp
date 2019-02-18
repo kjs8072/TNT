@@ -15,11 +15,11 @@
 	<h2>학생 정보</h2>
 	<%
 		//언어 설정
-			request.setCharacterEncoding("UTF-8");
-		TestvuVO testvu = new TestvuVO();
-			StudentDAO tnt = new StudentDAO();
+		request.setCharacterEncoding("UTF-8");
+			TestvuBean testvu = new TestvuBean();
+		StudentDAO tnt = new StudentDAO();
 
-			tnt.getStudents();
+		tnt.getStudents();
 	%>
 
 	<table border="1">
@@ -33,7 +33,7 @@
 			<th>시험결과</th>
 		</tr>
 		<%
-			for (TestvuVO tu : (ArrayList<TestvuVO>)list) {
+			for (TestvuBean tu : (ArrayList<TestvuBean>)list) {
 		%>
 		<tr>
 

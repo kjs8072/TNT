@@ -1,8 +1,8 @@
-package TNT_DAO;
+package TNT_Bean;
 
 import java.sql.Date;
 
-public class TestvuVO {
+public class TestvuBean {
 
 	private String student_name;
 	private String course_name;
