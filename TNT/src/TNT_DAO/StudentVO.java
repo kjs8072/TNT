@@ -1,4 +1,4 @@
-package TNT;
+package TNT_DAO;
 
 import java.sql.Date;
 

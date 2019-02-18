@@ -1,21 +1,34 @@
-package TNT;
+package TNT_DAO;
 
 import java.sql.Date;
 
-public class GradeVO {
-	private int score_num;
+public class TestvuVO {
+
+	private String student_name;
+	private String course_name;
+	private String subject_name;
 	private int score;
 	private Date test_date;
 	private String test_division;
 	private String test_result;
-	private int detail_num;
-	private int student_num;
 	
-	public int getScore_num() {
-		return score_num;
+	public String getStudent_name() {
+		return student_name;
 	}
-	public void setScore_num(int score_num) {
-		this.score_num = score_num;
+	public void setStudent_name(String student_name) {
+		this.student_name = student_name;
+	}
+	public String getCourse_name() {
+		return course_name;
+	}
+	public void setCourse_name(String course_name) {
+		this.course_name = course_name;
+	}
+	public String getSubject_name() {
+		return subject_name;
+	}
+	public void setSubject_name(String subject_name) {
+		this.subject_name = subject_name;
 	}
 	public int getScore() {
 		return score;
@@ -41,18 +54,4 @@ public class GradeVO {
 	public void setTest_result(String test_result) {
 		this.test_result = test_result;
 	}
-	public int getDetail_num() {
-		return detail_num;
-	}
-	public void setDetail_num(int detail_num) {
-		this.detail_num = detail_num;
-	}
-	public int getStudent_num() {
-		return student_num;
-	}
-	public void setStudent_num(int student_num) {
-		this.student_num = student_num;
-	}
-	
-	
 }
