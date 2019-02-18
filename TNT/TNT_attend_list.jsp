@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="TNT.*, java.util.*" %>
+<%@ page import="TNT_Bean.*, TNT_DAO.*, java.util.*" %>
 <jsp:useBean id="data" class="java.util.ArrayList" scope="request"></jsp:useBean>
 <jsp:setProperty property="*" name="data"></jsp:setProperty>
 
@@ -23,7 +23,7 @@
 			<th>출석구분</th>
 		</tr>
 		<%
-			for(TNTBean ab : (ArrayList<TNTBean>) data) {
+			for(AttendBean ab : (ArrayList<AttendBean>) data) {
 		%>
 		<tr>
 			<td><%=ab.getAttendance_num() %></td>
