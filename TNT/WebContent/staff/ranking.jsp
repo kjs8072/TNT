@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="TNT_DAO.*, java.util.ArrayList, java.sql.Date"%>
+<%@ page import="TNT_Bean.*, TNT_DAO.*, java.util.ArrayList, java.sql.Date"%>
+
 <jsp:useBean id="list" class="java.util.ArrayList" scope="request"></jsp:useBean>
 <jsp:setProperty property="*" name="list"></jsp:setProperty>
 <!DOCTYPE html>
@@ -16,7 +17,7 @@
 	<%
 		//언어 설정
 		request.setCharacterEncoding("UTF-8");
-			TestvuBean testvu = new TestvuBean();
+		TestvuBean testvu = new TestvuBean();
 		StudentDAO tnt = new StudentDAO();
 
 		tnt.getStudents();
