@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
    pageEncoding="EUC-KR"%>
-<%@ page import="java.util.ArrayList, TNT.TNTStudent"%>
+<%@ page import="java.util.ArrayList, TNT_Bean.*, TNT_DAO.*"%>
 
 <jsp:useBean id="bean" class="TNT_Bean.AttendBean"></jsp:useBean>
 <jsp:useBean id="TNT" class="TNT_DAO.StudentDAO"></jsp:useBean>

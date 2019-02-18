@@ -1,6 +1,6 @@
 package TNT_DAO;
 
-//지선이바보
+
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -113,4 +113,53 @@ public class StudentDAO {
 		}
 		return list;
 	}
+	
+	public int funcStudent_check(String id) {
+	      connect();
+	      CallableStatement cs;
+	      String sql = "{? = call studid_check(?)";
+	      int result = 0;
+
+	      try {
+	         cs = conn.prepareCall(sql);
+	         cs.registerOutParameter(1, java.sql.Types.INTEGER);
+	         cs.setString(2, id);
+	         cs.execute();
+	         result = cs.getInt(1);
+	         System.out.println("llllllllllllllllllllllll"+result);
+//	         System.out.println(cs.getInt(1) + " => success ");
+	         cs.close();
+	      } catch (SQLException e) {
+	         e.printStackTrace();
+	         return 0;
+	      }
+	      return result;
+	   }
+	
+	public boolean insertDB(StudentBean membership) { //삽입
+		connect();
+		String sql = "insert into students (student_id,student_pw,student_name,sysdate,student_gender,student_phone,student_address,student_complete_edu,student_univ_coll,student_major)"
+					+ " values (?,?,?,?,?,?,?,?,?) ";
+			try {
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, membership.getStudent_id());
+				pstmt.setString(2, membership.getStudent_pass()); //ex)
+				pstmt.setString(3, membership.getStudent_name());
+				pstmt.setString(4, membership.getStudent_gender());
+				pstmt.setString(5, membership.getStudent_phone());
+				pstmt.setString(6, membership.getStudent_address());
+				pstmt.setString(7, membership.getStudent_complete_edu());
+				pstmt.setString(8, membership.getStudent_univ_coll());
+				pstmt.setString(9, membership.getStudent_major());
+				pstmt.executeUpdate();
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+				return false;
+			} finally {
+				disconnect();
+			}
+			return true;
+	}
+	
 }
