@@ -10,7 +10,7 @@
 <jsp:useBean id="vu" class="TNT_Bean.TestvuBean" />
 
 <jsp:setProperty property="*" name="bean" />
-<jsp:setProperty property="*" name="student"/>
+<jsp:setProperty property="*" name="student" />
 <jsp:setProperty property="*" name="vu" />
 
 <%

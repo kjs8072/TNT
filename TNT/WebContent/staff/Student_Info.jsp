@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="TNT_Bean.*, TNT_DAO.*, java.util.ArrayList, java.sql.Date"%>
+<%@ page
+	import="TNT_Bean.*, TNT_DAO.*, java.util.ArrayList, java.sql.Date"%>
 <jsp:useBean id="list" class="java.util.ArrayList" scope="request"></jsp:useBean>
 <jsp:setProperty property="*" name="list"></jsp:setProperty>
 <!DOCTYPE html>
@@ -35,7 +36,7 @@
 			<th>전공</th>
 		</tr>
 		<%
-			for (StudentBean st : (ArrayList<StudentBean>)list) {
+			for (StudentBean st : (ArrayList<StudentBean>) list) {
 		%>
 		<tr>
 			<td><%=st.getStudent_num()%></td>
