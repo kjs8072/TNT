@@ -9,7 +9,7 @@
 	function mypage(){
 		document.form1.action.value="mypage";
 		document.form1.submit();
-	}
+	}   
 
 </script>
 <h2>student_main</h2>
