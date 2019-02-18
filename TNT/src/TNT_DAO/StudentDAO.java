@@ -1,4 +1,4 @@
-package TNT_Bean;
+package TNT_DAO;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -8,10 +8,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import TNT_DAO.StudentVO;
-import TNT_DAO.TestvuVO;
+import TNT_Bean.StudentBean;
 
-public class TntBean {
+public class StudentDAO {
 
 	Connection conn = null;
 	PreparedStatement pstmt = null;
@@ -53,19 +52,19 @@ public class TntBean {
 		}
 	}
 
-	public ArrayList<StudentVO> getStudents() {
+	public ArrayList<StudentBean> getStudents() {
 		connect();
 		String sql = "select student_num, student_name, student_birth, student_gender, student_phone, "
 							+ "student_address, student_complete_edu, student_univ_coll, student_major "
 							+ "from students order by 1";
 		
-		ArrayList<StudentVO> list = new ArrayList<>();
-		StudentVO student = null;
+		ArrayList<StudentBean> list = new ArrayList<>();
+		StudentBean student = null;
 		try {
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				student = new StudentVO();
+				student = new StudentBean();
 				student.setStudent_num(rs.getInt("student_num"));
 				student.setStudent_name(rs.getString("student_name"));
 				student.setStudent_birth(rs.getDate("student_birth"));

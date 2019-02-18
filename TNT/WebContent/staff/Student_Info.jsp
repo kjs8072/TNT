@@ -16,8 +16,8 @@
 	<%
 		//언어 설정
 		request.setCharacterEncoding("UTF-8");
-		StudentVO student = new StudentVO();
-		TntBean tnt = new TntBean();
+		StudentBean student = new StudentBean();
+		StudentDAO tnt = new StudentDAO();
 
 		tnt.getStudents();
 	%>
@@ -35,7 +35,7 @@
 			<th>전공</th>
 		</tr>
 		<%
-			for (StudentVO st : (ArrayList<StudentVO>)list) {
+			for (StudentBean st : (ArrayList<StudentBean>)list) {
 		%>
 		<tr>
 			<td><%=st.getStudent_num()%></td>

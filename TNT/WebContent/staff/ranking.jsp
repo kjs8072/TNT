@@ -15,11 +15,11 @@
 	<h2>학생 정보</h2>
 	<%
 		//언어 설정
-		request.setCharacterEncoding("UTF-8");
-	TestvuVO testvu = new TestvuVO();
-		TntBean tnt = new TntBean();
+			request.setCharacterEncoding("UTF-8");
+		TestvuVO testvu = new TestvuVO();
+			StudentDAO tnt = new StudentDAO();
 
-		tnt.getStudents();
+			tnt.getStudents();
 	%>
 
 	<table border="1">

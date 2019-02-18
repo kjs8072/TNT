@@ -1,12 +1,12 @@
 <%@page import="TNT_DAO.TestvuVO"%>
-<%@page import="TNT_DAO.StudentVO"%>
+<%@page import="TNT_Bean.StudentBean"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@page import="java.util.ArrayList"%>
 
-<jsp:useBean id="bean" class="TNT_Bean.TntBean" />
-<jsp:useBean id="student" class="TNT_DAO.StudentVO" />
-<jsp:useBean id="grade" class="TNT_DAO.GradeVO" />
+<jsp:useBean id="bean" class="TNT_DAO.StudentDAO" />
+<jsp:useBean id="student" class="TNT_Bean.StudentBean" />
+<jsp:useBean id="grade" class="TNT_Bean.GradeBean" />
 <jsp:useBean id="vu" class="TNT_DAO.TestvuVO" />
 
 <jsp:setProperty property="*" name="bean" />
@@ -23,7 +23,7 @@
 	if (action.equals("list")) {
 
 		//bean에 있는 getStudents를 실행하고 나온 값을 arrylist type으로 studentVO에 넣음
-		ArrayList<StudentVO> list = bean.getStudents();
+		ArrayList<StudentBean> list = bean.getStudents();
 
 		//list에 넣은 값을 "list"로 설정?
 		request.setAttribute("list", list);

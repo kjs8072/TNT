@@ -1,8 +1,8 @@
-package TNT_DAO;
+package TNT_Bean;
 
 import java.sql.Date;
 
-public class GradeVO {
+public class GradeBean {
 	private int score_num;
 	private int score;
 	private Date test_date;

@@ -1,8 +1,8 @@
-package TNT_DAO;
+package TNT_Bean;
 
 import java.sql.Date;
 
-public class Student_License_VO {
+public class StudentLicenseBean {
 
 	private String t_license_code;
 	private Date t_license_start_date;
